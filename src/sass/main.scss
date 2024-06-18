@@ -1,0 +1,131 @@
+@use './colors';
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	background-color: #333;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.nav-desktop {
+	display: none;
+}
+
+.nav-mobile {
+	overflow: hidden;
+
+	&__close-btn,
+	&__menu {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		width: 60px;
+	}
+
+	&__list {
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 4em;
+		height: 100svh;
+		width: 100%;
+		background-color: #fff;
+		list-style: none;
+		transform: translateX(100%);
+		transition: transform 0.3s;
+
+		&--item {
+			a {
+				padding: 1em;
+				font-size: 2.4rem;
+				color: colors.$black;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.nav-items-animation {
+	animation: slideIn 1s both;
+}
+
+.active {
+	transform: translateX(0);
+}
+
+.test {
+	min-height: 100svh;
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateX(200%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+// =============
+// ** MEDIA **
+// =============
+
+@media (min-width: 768px) {
+	.nav-mobile {
+		display: none;
+	}
+
+	.nav-desktop {
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: colors.$white;
+		width: 100%;
+		height: 130px;
+
+		&__icon {
+			width: 150px;
+		}
+
+		&__box {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__list {
+			display: flex;
+			gap: 4.5em;
+			list-style: none;
+
+			&--item {
+				a {
+					font-size: 2.8em;
+					color: colors.$black;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
