@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="175" height="100" viewBox="0 0 175 100">
+  <g id="barbell-outline" transform="translate(-18 -119.714)">
+    <path id="Path_2" data-name="Path 2" d="M48,256H183.571" transform="translate(-10.786 -86.286)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="10" height="84" rx="5" transform="translate(163 127.714)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+    <rect id="Rectangle_3" data-name="Rectangle 3" width="10" height="84" rx="5" transform="translate(40 127.714)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+    <rect id="Rectangle_4" data-name="Rectangle 4" width="5" height="42" rx="2.5" transform="translate(24 148.714)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"/>
+    <rect id="Rectangle_5" data-name="Rectangle 5" width="5" height="42" rx="2.5" transform="translate(182 148.714)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"/>
+  </g>
+</svg>
