@@ -1,4 +1,5 @@
 @use './colors';
+@use './components';
 
 *,
 *::after,
@@ -18,17 +19,13 @@ body {
 	background-color: #333;
 }
 
-.wrapper {
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1200px;
-}
-
 .nav-desktop {
 	display: none;
 }
 
 .nav-mobile {
+	position: relative;
+	z-index: 10;
 	overflow: hidden;
 
 	&__close-btn,
@@ -72,10 +69,6 @@ body {
 	transform: translateX(0);
 }
 
-.test {
-	min-height: 100svh;
-}
-
 @keyframes slideIn {
 	from {
 		transform: translateX(200%);
@@ -84,6 +77,43 @@ body {
 	to {
 		transform: translateX(0);
 	}
+}
+
+// HEADER
+.header {
+	position: relative;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2em;
+		margin-top: 4em;
+	}
+
+	&__img-box {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 300px;
+		height: 300px;
+		// border: 5px solid black;
+		border-radius: 50%;
+		overflow: hidden;
+		// background-image: url('../../dist/img/profilowe.jpg');
+		// background-size: cover;
+		// background-position: center;
+	}
+
+	&__img {
+		width: 100%;
+	}
+}
+
+.test {
+	min-height: 100svh;
 }
 
 // =============
@@ -97,15 +127,19 @@ body {
 
 	.nav-desktop {
 		position: fixed;
+		top: 0;
+		left: 0;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		background-color: colors.$white;
 		width: 100%;
 		height: 130px;
+		padding: 0 2em;
+		z-index: 100;
 
 		&__icon {
-			width: 150px;
+			width: 130px;
 		}
 
 		&__box {
@@ -116,14 +150,26 @@ body {
 
 		&__list {
 			display: flex;
-			gap: 4.5em;
 			list-style: none;
 
 			&--item {
 				a {
-					font-size: 2.8em;
+					padding: 0.5em;
+					font-size: 2.4em;
 					color: colors.$black;
 					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.nav-desktop {
+		&__list {
+			&--item {
+				a {
+					padding: 1em;
 				}
 			}
 		}
