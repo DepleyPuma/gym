@@ -138,7 +138,41 @@ body {
 
 // MAIN
 .main {
-	padding-top: 10em;
+	margin-top: 3em;
+}
+
+// ABOUT-ME
+.about-me {
+	&__content {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 3em;
+		margin-top: 5em;
+	}
+
+	&__text-box {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+		font-size: 2rem;
+		line-height: 1.5em;
+		max-width: 65ch;
+	}
+
+	&__link {
+		color: colors.$black;
+		cursor: pointer;
+	}
+
+	&__img-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__img {
+		width: 60%;
+	}
 }
 
 .test {
@@ -214,7 +248,6 @@ body {
 	}
 
 	.header {
-		overflow: hidden;
 		height: 100svh;
 
 		&__content {
@@ -236,7 +269,7 @@ body {
 		position: absolute;
 		overflow: hidden;
 		width: 100%;
-		height: 200%;
+		height: 100%;
 
 		.asset {
 			display: block;
@@ -245,26 +278,26 @@ body {
 
 		.dots {
 			top: -22%;
-			right: -75%;
+			right: -78%;
 		}
 
 		.cross:nth-child(1) {
-			top: 38%;
-			left: 73%;
+			top: 83%;
+			left: 76%;
 			width: 11%;
 			// width: 8%;
 			animation: rotateToRight 60s infinite;
 		}
 
 		.cross:nth-child(2) {
-			top: 32%;
+			top: 75%;
 			left: 6%;
 			width: 15%;
 			// width: 15%;
 			animation: rotateToLeft 60s infinite;
 		}
 		.cross:nth-child(3) {
-			top: 10%;
+			top: 17%;
 			left: 7%;
 			width: 13%;
 			// width: 8%;
@@ -291,6 +324,12 @@ body {
 			transform: rotate(-360deg);
 		}
 	}
+
+	.about-me {
+		&__text-box {
+			font-size: 2.4rem;
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -306,25 +345,41 @@ body {
 
 	.assets-box {
 		.dots {
-			top: -20%;
-			right: -55%;
+			top: -29%;
+			right: -54%;
 		}
 
 		.cross:nth-child(1) {
-			top: 33%;
+			top: 79%;
 			left: 73%;
 			width: 11%;
 		}
 
 		.cross:nth-child(2) {
-			top: 28%;
+			top: 67%;
 			left: 9%;
 			width: 16%;
 		}
 		.cross:nth-child(3) {
-			top: 8%;
+			top: 17%;
 			left: 7%;
 			width: 14%;
+		}
+	}
+
+	.about-me {
+		&__content {
+			flex-direction: row;
+			align-items: center;
+			gap: 5em;
+		}
+
+		&__text-box {
+			font-size: 2.4rem;
+		}
+
+		&__img {
+			width: 100%;
 		}
 	}
 }
@@ -332,23 +387,23 @@ body {
 @media (min-width: 1200px) {
 	.assets-box {
 		.dots {
-			top: -14%;
-			right: -20%;
+			top: -35%;
+			right: -30%;
 		}
 
 		.cross:nth-child(1) {
-			top: 42%;
+			top: 84%;
 			left: 68%;
 			width: 7%;
 		}
 
 		.cross:nth-child(2) {
-			top: 32%;
+			top: 66%;
 			left: 9%;
 			width: 16%;
 		}
 		.cross:nth-child(3) {
-			top: 9%;
+			top: 21%;
 			left: 6%;
 			width: 10%;
 		}
