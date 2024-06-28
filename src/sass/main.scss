@@ -175,6 +175,75 @@ body {
 	}
 }
 
+//OFFERS
+.offers {
+	&__cards-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		gap: 6em;
+		margin-top: 4em;
+	}
+
+	.card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 4em;
+		padding: 3em 8em;
+		border: 1px solid colors.$black;
+		border-radius: 8px;
+		min-height: 500px;
+		max-width: 400px;
+		transform: scale(0.8);
+		transition: transform 0.3s;
+		// box-shadow: 0 0 10px colors.$light-grey;
+
+		&__title {
+			text-align: center;
+			font-size: 4rem;
+			text-transform: uppercase;
+		}
+
+		&__price {
+			// font-weight:lighter;
+			text-align: center;
+			font-size: 2.8rem;
+		}
+
+		&__options {
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+			line-height: 3em;
+		}
+
+		&__option {
+			font-size: 2.2rem;
+		}
+
+		&__option::marker {
+			content: '- ';
+		}
+
+		&__button {
+			justify-self: flex-end;
+			padding: 1em 3em;
+			color: colors.$white;
+			background-color: colors.$black;
+			border-radius: 8px;
+			font-size: 2rem;
+			cursor: pointer;
+		}
+	}
+
+	.card:hover {
+		transform: scale(1);
+	}
+}
+
 .test {
 	min-height: 100svh;
 }
@@ -328,6 +397,13 @@ body {
 	.about-me {
 		&__text-box {
 			font-size: 2.4rem;
+		}
+	}
+
+	.offers {
+		&__cards-box {
+			flex-direction: row;
+			gap: 0;
 		}
 	}
 }
