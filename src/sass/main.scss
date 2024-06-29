@@ -187,60 +187,65 @@ body {
 	}
 
 	.card {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 4em;
-		padding: 3em 8em;
-		border: 1px solid colors.$black;
-		border-radius: 8px;
-		min-height: 500px;
-		max-width: 400px;
-		transform: scale(0.8);
-		transition: transform 0.3s;
-		// box-shadow: 0 0 10px colors.$light-grey;
+		position: relative;
+
+		&__img {
+			width: 100%;
+			margin-top: 2em;
+		}
 
 		&__title {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 100%;
+			margin: 0 auto;
+			font-size: 2.4rem;
 			text-align: center;
-			font-size: 4rem;
 			text-transform: uppercase;
+			transform: translateX(-50%);
 		}
 
 		&__price {
-			// font-weight:lighter;
 			text-align: center;
-			font-size: 2.8rem;
+			font-size: 3.2rem;
+			margin: 0.5em 0;
 		}
 
 		&__options {
 			display: flex;
 			flex-direction: column;
-			gap: 1em;
-			line-height: 3em;
+			justify-content: center;
+			text-align: center;
+			list-style: none;
+			padding: 0 2em;
 		}
 
 		&__option {
-			font-size: 2.2rem;
-		}
-
-		&__option::marker {
-			content: '- ';
+			// display: block;
+			padding: 0 0.5em;
+			margin: 0.5em 0;
+			font-size: 1.8rem;
+			line-height: 1.5em;
 		}
 
 		&__button {
-			justify-self: flex-end;
-			padding: 1em 3em;
+			display: block;
+			padding: 1.5em 4em;
+			margin: 2em auto;
+			width: 80%;
+			color: colors.$black;
+			background-color: colors.$white;
+			border: 1px solid colors.$black;
+			border-radius: 10px;
+			cursor: pointer;
+			transition: color 0.3s, background-color 0.3s;
+		}
+
+		&__button:hover {
 			color: colors.$white;
 			background-color: colors.$black;
-			border-radius: 8px;
-			font-size: 2rem;
-			cursor: pointer;
 		}
-	}
-
-	.card:hover {
-		transform: scale(1);
 	}
 }
 
@@ -399,13 +404,6 @@ body {
 			font-size: 2.4rem;
 		}
 	}
-
-	.offers {
-		&__cards-box {
-			flex-direction: row;
-			gap: 0;
-		}
-	}
 }
 
 @media (min-width: 992px) {
@@ -458,6 +456,31 @@ body {
 			width: 100%;
 		}
 	}
+
+	.offers {
+		.card {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid colors.$black;
+			border-radius: 10px;
+			width: 100%;
+			overflow: hidden;
+
+			&__img {
+				width: 50%;
+			}
+
+			&__title {
+				position: relative;
+				font-size: 4.8rem;
+			}
+
+			&__button {
+				margin-top: 4em;
+			}
+		}
+	}
 }
 
 @media (min-width: 1200px) {
@@ -482,6 +505,16 @@ body {
 			top: 21%;
 			left: 6%;
 			width: 10%;
+		}
+	}
+
+	.offers {
+		.card {
+			width: 110%;
+
+			&__button {
+				width: 580px;
+			}
 		}
 	}
 }
