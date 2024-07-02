@@ -9,8 +9,13 @@ const personalTrainingBtn = document.querySelector('#personalTraining');
 const contactSection = document.querySelector('.contact');
 const selectOptionInput = document.querySelector('#selectedOption');
 const optionsArr = [...document.querySelectorAll('option')].map(option => option.value);
+const footerYear = document.querySelector('.footer__year');
 
 let option;
+
+const date = new Date();
+
+footerYear.textContent = date.getFullYear();
 
 const openNav = () => {
 	let delay = 0;
