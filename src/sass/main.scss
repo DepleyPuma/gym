@@ -159,11 +159,6 @@ body {
 		max-width: 65ch;
 	}
 
-	&__link {
-		color: colors.$black;
-		cursor: pointer;
-	}
-
 	&__img-box {
 		display: flex;
 		justify-content: center;
@@ -302,6 +297,23 @@ body {
 			border-radius: 10px;
 			cursor: pointer;
 		}
+	}
+}
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5em;
+	padding: 2em 4em;
+	font-size: 1.6rem;
+	color: colors.$white;
+	background-color: colors.$footer-color;
+
+	a {
+		font-size: 1.8rem;
+		color: colors.$white;
 	}
 }
 
